@@ -38,13 +38,12 @@ static int run_time = 100;
 
 // ============================  DP-CLCS by Chin ============================
 // Chin, F. Y., et al. (2004). "A simple algorithm for the constrained sequence problems." Information Processing Letters 90(4): 175-179.
+//===== Dynamic programming O(rmn) =====
 
-// 
 template<typename T>
 std::vector<std::vector<std::vector<T>>> make_3d_vector(int z, int y, int x, T value = T{}) {
     return std::vector<std::vector<std::vector<T>>>(z, std::vector<std::vector<T>>(y, std::vector<T>(x, value)));
 }
-
 
 /** Chin et al. algorithm */
 int DP_Chin(int* A, int* B, int* P, int m, int n, int r) {
