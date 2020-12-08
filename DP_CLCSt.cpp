@@ -36,7 +36,7 @@ static int r = 50;
 // upbound of run_time
 static int run_time = 100;
 
-// ============================ DP-CLCSt ============================
+// ============================ Max Suffix ============================
 
 // calculate the length of suffix of P_k in A_i
 int maxSuf(int* A, int* P, int pk, int ai) {
@@ -51,7 +51,10 @@ int maxSuf(int* A, int* P, int pk, int ai) {
     return suf;
 }
 
-//Dynamic programming O(mn)
+// ============================ DP-LCSt+ by Benson ============================
+// Benson, G., et al. (2016). "LCSk: a refined similarity measure." Theoretical Computer Science 638: 11-26.
+// ===== Dynamic programming O(rmn) =====
+
 int DP_CLCSt(int* A, int* B, int* P, int m, int n, int r, int k) {
 
     // 0 Initialize
