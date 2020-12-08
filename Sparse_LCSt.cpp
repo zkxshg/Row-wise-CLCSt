@@ -261,6 +261,7 @@ int* Group(int* T, int k, int m, int n) {
 
 // ==================== sparse DP-LCSt by Pavetic ====================
 // Pavetić, F., et al. (2017). "Fast and simple algorithms for computing both LCSk and LCSk+ ." arXiv preprint arXiv:1705.07279.
+// ===== Row-wise match pair based: O(m + n + R + min(Rlogl, R + ml))====
 
 int PV_Method_All_array(int* A, int* B, int m, int n, int k, int alphabet) {
     // ===== 0 创建后缀数组并计算LCP后分群 =====
@@ -420,8 +421,9 @@ int main()
 
     int BS = Benson_Algorithm(A, B, m, n, k);
     cout << "BS: " << BS << endl;
-    // int PV = PV_Method_All_array(A, B, m, n, k, alphabet);
-    // cout << "PV: " << PV << endl;
+    
+    int PV = PV_Method_All_array(A, B, m, n, k, alphabet);
+    cout << "PV: " << PV << endl;
     
     system("pause");
 }
