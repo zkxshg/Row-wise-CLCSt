@@ -32,6 +32,7 @@ static int run_time = 100;
 
 // ============================ sparse DP-LCSt+ by Pavetic ============================
 // Pavetić, F., et al. (2017). "Fast and simple algorithms for computing both LCSk and LCSk+ ." arXiv preprint arXiv:1705.07279.
+// ===== Row-wise match pair based: O(m + n + R + min(R(logl + k), R + ml))====
 int Row_PV_plus_All_array(int* A, int* B, int m, int n, int k, int alphabet) {
     // ===== 0 创建后缀数组并计算LCP后分群 =====
     int* Z = new int[m + n + 1];
