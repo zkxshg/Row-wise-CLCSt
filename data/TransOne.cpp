@@ -15,13 +15,13 @@
 
 using namespace std;
 
-static string fileName = "D:/Lab/Tex-ÂÛÎÄĞŞ¸Ä/7_Realdata/Expre Design/Exp1_diff_virus/Ref_COV19_EPI_ISL_406801.fasta";
-static string savefile = "D:/Lab/Tex-ÂÛÎÄĞŞ¸Ä/7_Realdata/Expre Design/Exp1_diff_virus/A.fasta";
+static string fileName = "/Expre Design/Exp1_diff_virus/Ref_COV19_EPI_ISL_406801.fasta";
+static string savefile = "/Expre Design/Exp1_diff_virus/A.fasta";
 
-// ==================== Ö÷²âÊÔº¯Êı ====================
+// ==================== ä¸»æµ‹è¯•å‡½æ•° ====================
 int main(int argc, char** argv) {
     // int argc, char** argv
-    //// ========== = ¶ÁÈë²ÎÊı ========== =
+    //// ========== = è¯»å…¥å‚æ•° ========== =
 
     fileName = argv[1];
     savefile = argv[2];
